@@ -1,0 +1,17 @@
+
+{% extends "blog_app/base.html" %}
+{%block content%}
+<br>
+<h2>New post</h2>
+<br>
+
+<div class="container">
+  <form class="post-form" method="POST">
+    {{form.as_p}}
+    {%csrf_token%}
+    <input type="submit" class="btn btn-primary" name="" value="Submit">
+
+  </form>
+
+</div>
+{%endblock%}

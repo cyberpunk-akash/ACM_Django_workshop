@@ -1,0 +1,14 @@
+{% extends "blog_app/base.html" %}
+{%block content%}
+
+<div class="container">
+  {%for post in post_list%}
+  <br>
+    <h1 id="title">{{post.title}}</h1>
+    <h2>Author: {{post.author}}</h2>
+    <h3>{{post.text}}</h3>
+    <br>
+{%endfor%}
+  </div>
+
+{%endblock%}

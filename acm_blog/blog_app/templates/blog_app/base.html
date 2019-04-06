@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{%load staticfiles %}
+<html>
+  <head>
+    <title>Blog</title>
+
+<!-- Bootstrap -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'blog_app/css/mystyle.css' %}"/>
+  </head>
+  <body>
+
+    <nav class = "navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <div class="navbar-nav align-items-center">
+      <a class="navbar-brand" href="{%url 'index'%}">ACM</a>
+      <a class="nav-item nav-link" href="{%url 'form' %}">Create Post</a>
+      <a class="nav-item nav-link" href="{%url 'detail'%}">View Posts</a>
+      </div>
+    </nav>
+            {%block content%}
+            {% endblock %}
+
+</body>
+</html>
